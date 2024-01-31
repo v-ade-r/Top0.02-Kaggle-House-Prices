@@ -1,4 +1,4 @@
-# Top2% KaggleHouse Prices
+# Top2% Kaggle House Prices
 
 Code for the "House Prices - Advanced Regression Techniques" competition on Kaggle.
 
