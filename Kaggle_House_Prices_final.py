@@ -167,6 +167,7 @@ convert_feature_to_str(test_df, feature_list_to_str)
 X = train_df.iloc[:,1:-1]
 X_comp = test_df.iloc[:,1:-1]
 
+# Removing skewness in SalePrice
 y = train_df.SalePrice
 y = np.log(y)
 
@@ -776,7 +777,7 @@ NN = np.loadtxt('best_NN_voting.txt')
 # Checking if the length of predictions is correct and the same
 #print(len(stack), len(fullMap), len(ridge), len(xgbr), len(lgbm), len(lasso), len(elastic), len(svr), len(kernel_ridge), len(catboost), len(NN))
 
-# Final predictions.
+# Final predictions --------------------------------------------------------------------------------------------------------
 """The only purpose of it, is the highest score on Kaggle. Stacking and voting ensembles usually should
 be trained and validated using CV before, and finally tested on test dataset.
 Anyway, after many manual tests, voting weights has been assigned to the best predictors (stack, fullMap) and to
