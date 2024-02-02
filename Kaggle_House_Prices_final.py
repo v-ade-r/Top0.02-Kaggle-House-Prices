@@ -39,7 +39,7 @@ print(train_df.dtypes)
 print(train_df.isnull().sum())
 print(test_df.isnull().sum())
 
-# 0. General overview of data: -------------------------------------------------------------------------------------------
+# 0. General overview of the data: -------------------------------------------------------------------------------------------
 profile = ProfileReport(train_df)
 profile.to_file('profile_train.html')
 profile = ProfileReport(test_df)
