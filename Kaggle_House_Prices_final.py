@@ -594,7 +594,6 @@ def results(model, X, y, X_comp):
         print(result.head())
 
 
-
 # Choosing best stack composition. It should be done again with CV on train set or on additional data, but since this kaggle
 # dataset is so small, I broke the rule and tuned on the test set results, risking overfitting on the test set.
 
@@ -760,8 +759,6 @@ result = pd.DataFrame({'Id': test_df.Id,
 print(result.head())
 result.to_csv('final_results.csv', index=False)
 
-
-
 stack = np.loadtxt('stack.txt')
 fullMap = np.loadtxt('fullMap.txt')
 ridge = np.loadtxt('ridge.txt')
@@ -788,4 +785,3 @@ preds = ((stack * 0.45) + (fullMap * 0.25) + (xgbr * 0.2) + (NN * 0.10))
 results = pd.DataFrame({'Id': test_df.Id,'SalePrice': preds.squeeze()})
 print(results.head())
 results.to_csv('results_kaggle_housing.csv', index=False)
-
