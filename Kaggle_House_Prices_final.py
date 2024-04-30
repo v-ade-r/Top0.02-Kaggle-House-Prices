@@ -524,7 +524,7 @@ def objective(trial, model_selector):
         rmse = np.sqrt(-cross_val_score(model, X, y, scoring="neg_mean_squared_error", cv=5))
         return (rmse)
 
-    model.fit(X_train, y_train)
+   
     scores = []
     scores = cv_rmse(model, X_train, y_train)
     score = scores.mean()
